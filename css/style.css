@@ -162,7 +162,7 @@ header::before {
 .sponsors .logos {
   display: flex;
   align-items: center;
-  animation: moveLogos 10s linear infinite;
+  animation: moveLogos 40s linear infinite;
 }
 
 .sponsors img {
