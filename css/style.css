@@ -1,7 +1,7 @@
 :root {
   --primary-color: #003b5c; /* Strathmore blue */
   --secondary-color: #e31b23; /* Strathmore red */
-  --background-tint: rgba(0, 0, 0, 0.5);
+  --background-tint: rgba(0, 0, 0, 0.7);
 }
 
 body {
@@ -9,17 +9,53 @@ body {
   font-family: Arial, sans-serif;
 }
 
-header {
-  height: 100vh;
+nav {
+  background-color: var(--primary-color);
   color: white;
   display: flex;
-  justify-content: center;
   align-items: center;
-  background: url('background1.jpg'), url('background2.jpg');
-  background-size: cover;
-  background-position: center;
+  padding: 10px 20px;
+}
+
+nav .logo img {
+  height: 50px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+}
+
+header {
+  height: 100vh;
   position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-size: cover;
+  background-position: center;
+  animation: backgroundSlider 15s infinite;
 }
 
 header::before {
@@ -33,21 +69,51 @@ header::before {
   z-index: 1;
 }
 
-header h1 {
-  font-size: 3rem;
-  text-align: center;
-  z-index: 2;
+.header-content {
   position: relative;
+  z-index: 2;
+  padding-left: 20px;
 }
 
-section {
-  padding: 50px;
+.header-content h1 {
+  font-size: 3rem;
+  margin: 0;
+  color: white;
+  font-family: "Nanum Pen Script", serif;
+  font-weight: 400;
+}
+
+.header-content h2 {
+  font-size: 4rem;
+  margin: 0;
+  color: white;
+}
+
+.header-content p {
+  font-size: 1.2rem;
+  margin: 10px 0 20px;
+  color: white;
+}
+
+.register-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.register-btn:hover {
+  background-color: var(--secondary-color);
 }
 
 .about {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 50px;
 }
 
 .about img {
@@ -63,6 +129,7 @@ section {
   display: flex;
   justify-content: space-around;
   text-align: center;
+  padding: 50px;
 }
 
 .register .card {
@@ -106,6 +173,21 @@ section {
   }
   100% {
     transform: translateX(-100%);
+  }
+}
+
+@keyframes backgroundSlider {
+  0% {
+    background-image: url('../img/image1.JPG');
+  }
+  33% {
+    background-image: url('../img/image2.JPG');
+  }
+  66% {
+    background-image: url('../img/image3.JPG');
+  }
+  100% {
+    background-image: url('../img/image1.JPG');
   }
 }
 
