@@ -12,60 +12,81 @@
   <link rel="shortcut icon" type="image/x-icon" href="ttload.ico" />
 </head>
 <body>
-<nav>
-  <div class="logo">
-    <img src="img/sulogo.png" alt="Strathmore Logo">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="img/sulogo.png" alt="Strathmore Logo" height="50">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#register">Register</a></li>
+        <li class="nav-item"><a class="nav-link" href="#sponsors">Sponsors</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
   </div>
-  <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#register">Register</a></li>
-    <li><a href="#sponsors">Sponsors</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
 </nav>
 <header>
-  <div class="header-content">
+  <div class="header-content text-center text-white">
     <h1>Home of</h1>
     <h2>SUTTC</h2>
     <p>The exciting thrill of SUTTC awaits you</p>
     <a href="#register" class="btn register-btn">Register now</a>
   </div>
 </header>
-<section id="about" class="about">
-  <div class="about-text">
-    <h2>About SUTTC</h2>
-    <p>
-      The Strathmore University Table Tennis Club (SUTTC) is dedicated to fostering a vibrant table tennis community. We organize events, host competitions, and encourage skill development in a friendly atmosphere.
-      We host the annual SUTTC competition which brings people from all over Kenya for the love of Table Tennis.
-      The games are inclusive of singles, doubles, and the much-loved family games where families get to compete against each other.
-    </p>
-  </div>
-  <img src="img/image4.JPG" alt="A player in action">
-</section>
-<section id="register" class="register">
-  <div class="card">
-    <h3>Singles</h3>
-    <p>Register for individual competitions.</p>
-  </div>
-  <div class="card">
-    <h3>Doubles</h3>
-    <p>Register for team competitions.</p>
-  </div>
-  <div class="card">
-    <h3>Family</h3>
-    <p>Register for fun family matches.</p>
+<section id="about" class="about container py-5">
+  <div class="row align-items-center">
+    <div class="col-md-6">
+      <h2>About SUTTC</h2>
+      <p>
+        The Strathmore University Table Tennis Club (SUTTC) is dedicated to fostering a vibrant table tennis community. We organize events, host competitions, and encourage skill development in a friendly atmosphere.
+        We host the annual SUTTC competition which brings people from all over Kenya for the love of Table Tennis.
+        The games are inclusive of singles, doubles, and the much-loved family games where families get to compete against each other.
+      </p>
+    </div>
+    <div class="col-md-6 text-center">
+      <img src="img/image4.JPG" alt="A player in action" class="img-fluid rounded">
+    </div>
   </div>
 </section>
-<section id="sponsors" class="sponsors">
-  <div class="logos">
-    <img src="img/sponsor1.png" alt="Sponsor 1">
-    <img src="img/sponsor2.png" alt="Sponsor 2">
-    <img src="img/sponsor3.png" alt="Sponsor 3">
-    <img src="img/sponsor4.png" alt="Sponsor 4">
+<section id="register" class="register container py-5">
+  <div class="row text-center">
+    <div class="col-md-4 col-12 mb-3">
+      <div class="card p-3">
+        <h3>Singles</h3>
+        <p>Register for individual competitions.</p>
+      </div>
+    </div>
+    <div class="col-md-4 col-12 mb-3">
+      <div class="card p-3">
+        <h3>Doubles</h3>
+        <p>Register for team competitions.</p>
+      </div>
+    </div>
+    <div class="col-md-4 col-12 mb-3">
+      <div class="card p-3">
+        <h3>Family</h3>
+        <p>Register for fun family matches.</p>
+      </div>
+    </div>
   </div>
 </section>
-<footer>
+<section id="sponsors" class="sponsors  text-white py-5">
+  <div class="container overflow-hidden">
+    <div class="logos d-flex align-items-center">
+      <img src="img/sponsor1.png" alt="Sponsor 1" class="img-fluid me-3">
+      <img src="img/sponsor2.png" alt="Sponsor 2" class="img-fluid me-3">
+      <img src="img/sponsor3.png" alt="Sponsor 3" class="img-fluid me-3">
+      <img src="img/sponsor4.png" alt="Sponsor 4" class="img-fluid me-3">
+    </div>
+  </div>
+</section>
+<footer class="bg-danger text-white text-center py-3">
   <p>&copy; 2025 Strathmore University Table Tennis Club. All rights reserved.</p>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
